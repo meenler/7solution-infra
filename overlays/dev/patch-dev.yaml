@@ -8,7 +8,7 @@ spec:
     spec:
       containers:
         - name: go-app
-          image: peerasilp/7solution-app:v1.0.4
+          image: peerasilp/7solution-app:v1.0.3
           env:
             - name: APP_ENV
               value: "dev"

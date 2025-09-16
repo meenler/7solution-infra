@@ -6,12 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/meenler/7solution-infra.git'
+    repoURL: 'https://github.com/meenler/7solution-infra'
     targetRevision: dev
-    path: charts/go-app      # 👉 ชี้ไปที่ chart โดยตรง
-    helm:
-      valueFiles:
-        - values.yaml
+    path: overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: 7solution-dev
