@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: go-app-prod
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/meenler/7solution-infra'
+    targetRevision: main         # branch ที่ใช้
+    path: overlays/prod          # ชี้ไปที่ overlay prod
+    kustomize:
+      enableHelm: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: 7solution-prod
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
