@@ -1,10 +1,10 @@
 apiVersion: builtin
 kind: HelmChartInflationGenerator
 metadata:
-  name: 7solution-infra
-name: 7solution-infra
+  name: go-app
+name: go-app
 path: ../../charts/go-app
-releaseName: 7solution-infra
+releaseName: go-app
 valuesInline:
   replicaCount: 1
   image:
