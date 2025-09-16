@@ -1,0 +1,11 @@
+resources:
+  - ../../base
+
+patches:
+  - path: patch-prod.yaml
+
+namePrefix: prod-
+namespace: 7solution-prod
+
+commonLabels:
+  env: prod

@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: go-app
+          image: registry.example.com/go-app:1.0.0
+          env:
+            - name: APP_ENV
+              value: "prod"

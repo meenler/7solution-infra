@@ -1,0 +1,12 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: 7solution-infra
+name: 7solution-infra
+path: ../../charts/7solution-infra
+releaseName: 7solution-infra
+valuesInline:
+  replicaCount: 1
+  image:
+    repository: registry.example.com/7solution-infra
+    tag: "latest"

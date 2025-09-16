@@ -1,0 +1,11 @@
+resources:
+  - ../../base
+
+patches:
+  - path: patch-dev.yaml
+
+namePrefix: dev-
+namespace: 7solution-dev
+
+commonLabels:
+  env: dev
