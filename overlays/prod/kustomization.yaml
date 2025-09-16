@@ -1,5 +1,5 @@
 resources:
-  - ../../base
+  - ../../charts/go-app
 
 patches:
   - path: patch-prod.yaml
