@@ -1,4 +1,4 @@
-# Default values for 7solution-infra.
+# Default values for go-app.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -7,11 +7,11 @@ replicaCount: 1
 
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
-  repository: registry.example.com/7solution-infra
+  repository: peerasilp/7solution-app
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
+  tag: "v1.0.3"
 
 # This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
 imagePullSecrets: []

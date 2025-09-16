@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: go-app-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/meenler/7solution-infra.git'
+    targetRevision: dev
+    path: charts/go-app      # 👉 ชี้ไปที่ chart โดยตรง
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: 7solution-dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
