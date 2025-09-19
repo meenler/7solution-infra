@@ -39,6 +39,13 @@ This repository contains the Kubernetes manifests and GitOps configuration for d
 
 ## 🔧 Usage
 
+### Build manifests with Kustomize for check manifests
+```bash
+kustomize build overlays/dev
+kustomize build overlays/prod
+```
+
+
 ### Apply locally with Kustomize
 ```bash
 kubectl apply -k overlays/dev
